@@ -2,6 +2,14 @@
 | README for SGit |
 |=================|
 
+|================\
+|  ___  ___ _ _   \
+| / __|/ __(_) |_  \
+| \__ \ (_ | |  _|  \
+| |___/\___|_|\__|   \ 
+|=====================\
+  Git UI from shell
+
 SGit è un semplice script interattivo che permette di avere
 una interfaccia grafica sulla shell per gestire un repository git.
 
