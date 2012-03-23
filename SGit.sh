@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SGit
+#SGit 
 #    Copyright (C) 2012 Chris_Zeta - thewebcha[@]gmail.com
 #    Contributor: gianguido - gianguidorama[@]gmail.com
 #    This program is free software: you can redistribute it and/or modify
