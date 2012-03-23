@@ -6,16 +6,18 @@
 | \__ \ (_ | |  _|  \
 | |___/\___|_|\__|   \ 
 |=====================\
-  Git UI from shell
-
-SGit è un semplice script interattivo che permette di avere
-una interfaccia grafica sulla shell per gestire un repository git.
-
-
+|  Git UI from shell
+|
+|SGit è un semplice script interattivo che permette di avere
+|una interfaccia grafica sulla shell per gestire un repository git.
+|
+|
 |========|
 | AUTHOR |
 |========|
-
+|
 |==> Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
  |====> Twitter: https://twitter.com/#!/chris_zeta
  |====> GitHub: https://github.com/ChrisZeta
+|=====================================================================|
+
