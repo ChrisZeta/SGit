@@ -85,6 +85,7 @@ echo "  Git UI from shell"
 		 echo "Commit effettuato";;
 			
 	[5rR] ) echo "Quale file rimuovere?"
+		 ls
 		 echo -n ":"
 		 read r
 		 clear
@@ -92,6 +93,7 @@ echo "  Git UI from shell"
 		 echo "File rimosso";;
 			
 	[6mM] ) echo "File sorgente"
+		 ls
 		 echo -n ":"
 		 read s
 		 echo "File\cartella destinazione"
