@@ -154,8 +154,7 @@ echo "  Git UI from shell"
 	[qQeE] ) exit;;
 		   
 		  
-	* ) clear
-	    echo "Scelta non valida"
+	* ) echo "Scelta non valida"
 	esac
 
 done
