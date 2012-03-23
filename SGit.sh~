@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SGit
-#    Copyright (C) 2012 Chris_Zeta - thewebcha[@]gmail.com
+#    Copyright (C) 2012 Chris_Zeta - thewebcha@gmail.com
 #    
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -70,7 +70,6 @@ echo "  Git UI from shell"
 		 echo "repository creato";;
 			
 	[3aA] ) echo "Quale file aggiungere allo stage? (* per tutti)"
-		 ls
 		 echo -n ":"
 	         read f
 		 clear

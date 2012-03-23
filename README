@@ -1,0 +1,8 @@
+|=================|
+| README for SGit |
+|=================|
+
+SGit è un semplice script interattivo che permette di avere
+una interfaccia grafica sulla shell per gestire un repository git.
+
+Source: https://github.com/ChrisZeta/SGit
