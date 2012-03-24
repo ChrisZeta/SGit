@@ -1,0 +1,25 @@
+|================|
+| Changelog for  |
+|================\
+|  ___  ___ _ _   \
+| / __|/ __(_) |_  \
+| \__ \ (_ | |  _|  \
+| |___/\___|_|\__|   \ 
+|=====================\
+|  
+|========|
+|  0.1   |
+|========|
+|
+|=> Rilasciata la prima versione Alpha
+|
+|========|
+|  0.2   |
+|========|
+|
+|=> Aggiunto un controllo per stabilire se esiste un repository
+|   nella cartella in cui è posizionata la shell ed usarla.
+!====>(Gianguido Sorà)
+|
+|=====================================================================|
+

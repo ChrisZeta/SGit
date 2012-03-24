@@ -3,6 +3,7 @@
 #SGit 
 #    Copyright (C) 2012 Chris_Zeta - thewebcha[@]gmail.com
 #    Contributor: gianguido - gianguidorama[@]gmail.com
+#
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -44,10 +45,10 @@ echo "| / __|/ __(_) |_  \ "
 echo "| \__ \ (_ | |  _|  \ "
 echo "| |___/\___|_|\__|   \ "
 echo "|=====================\ "
-echo "  Git UI from shell"
+echo "  Git GUI from shell"
 
 	echo ""
-	echo "[ 1-D] Imposta\cambia directory del repository Git"
+	echo "[ 1-D] Cambia directory del repository Git"
 	echo "[ 2  ] Imposta directory del repository Git alla cartella attuale"
 	echo "[ 3-N] Crea un nuovo repository vuoto"
 	echo "[ 4-A] Aggiungi file allo stage"
