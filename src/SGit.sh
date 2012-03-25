@@ -22,18 +22,22 @@
 # Directory check: se esiste un repository git nella cartella dove si è posizionati, lo script avvertirà l'utente e
 # chiederà se posizionarvici.
 #
+
+clear
 if [ -d ".git" ]; then
         echo "Nella cartella dove sei posizionato ora c'è un repository Git, vuoi utilizzarlo? [s/n]"
+	echo -n ":"
         read GITI
         if [ "$GITI" = "s" ]; then
                 cd ./
+		clear
                 echo "Repository Git selezionato!"
         fi
 else
         true
 fi
 
-clear
+
 ESC=0
 while [ $ESC = 0 ]; do
 
