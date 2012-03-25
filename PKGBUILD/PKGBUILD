@@ -1,5 +1,5 @@
 # Maintainer: Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
-pkgname=SGit
+pkgname=sgit
 pkgver=20120325
 pkgrel=1
 pkgdesc="Git gui from a shell"
@@ -27,7 +27,7 @@ build() {
   fi
   msg " checkout done."
   
-  cd $srcdir/$pkgname/src || return 1
+  cd $srcdir/$_gitname/src || return 1
     
   install -Dm755 SGit.sh "${pkgdir}/usr/bin/sgit"
  }

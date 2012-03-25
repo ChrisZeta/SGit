@@ -18,10 +18,8 @@
 |========|
 |
 |=> Aggiunto un controllo per stabilire se esiste un repository
-|   nella cartella in cui è posizionata la shell ed usarla
+|   nella cartella in cui è posizionata la shell ed usarla.
 !====>(Gianguido Sorà)
-|
-|=> Correzioni minori
 |
 |=====================================================================|
 
