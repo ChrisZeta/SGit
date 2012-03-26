@@ -27,11 +27,12 @@
 |  0.5   |
 |========|
 |
-|=>Modificato il controllo sulla directory del repository, adesso
+|=> Modificato il controllo sulla directory del repository, adesso
 |  viene impostata automaticamente e non accetta directory senza 
-|  repository
+|  repository, inserito anche a script gia avviato
 |
-|=>Corretto il case
+|=> Corretto il case
 |
+|=> Correzioni minori
 |=====================================================================|
 
