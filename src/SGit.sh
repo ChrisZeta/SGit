@@ -123,7 +123,7 @@ echo "  Git GUI from shell"
 		 echo -n ":"
 		 read r
 		 clear
-		 git rm "$p/$r"
+		 git rm "$r"
 		 echo "File rimosso";;
 			
 	[6mM] ) echo "File sorgente"
@@ -134,7 +134,7 @@ echo "  Git GUI from shell"
 		 echo -n ":"
 		 read d
 		 clear
-		 git mv "$p/$s" "$p$d";;
+		 git mv "$s" "$d";;
 			
 	[7vV] ) clear
 		 echo "Branch locali:"
