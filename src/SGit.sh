@@ -32,13 +32,24 @@ then
 	echo "Directory impostata!"
 	break
 else
-	echo "Nella cartella corrente non c'è un repository Git."      
+	echo "Nella cartella corrente non c'è un repository Git." 
+	echo "Vuoi crearne uno adesso [s/N]?"
+	echo -n ":"
+	read c
+			if [ $c = "s" ]
+			then
+				clear
+				git init
+				touch README
+				echo "repository creato"
+			else
 	echo "Inserisci il percorso del tuo repository Git"
 	echo -n ":"
 	read p
 	clear
 	cd $p
 	echo "Sono entrato in $p!";
+	fi
 fi
 done
 
@@ -58,19 +69,19 @@ echo "  Git GUI from shell"
 
 	echo ""
 	echo "[ 1-D] Cambia directory del repository Git"
-	echo "[ 2-N] Crea un nuovo repository vuoto"
-	echo "[ 3-A] Aggiungi file allo stage"
-	echo "[ 4-C] Effettua un commit"
-	echo "[ 5-R] Rimuovi un file all'interno del progetto"
-	echo "[ 6-M] Rinomina o sposta un file all'interno del progetto"
-	echo "[ 7-V] Visualizza i branch locali"
-	echo "[ 8  ] Crea un nuovo branch"
-	echo "[ 9-B] Spostati in in branch"
-	echo "[10  ] Elimina un Branch"
-	echo "[11  ] Aggiungi un repository remoto"
-	echo "[12-F] Scarica gli aggiornamenti su di un branch locale"
-	echo "[13-P] Aggiorna il repository remoto"
-	echo "[14  ] Aggiorna un branch locale con un branch remoto"
+	echo "[ 2-A] Aggiungi file allo stage"
+	echo "[ 3-C] Effettua un commit"
+	echo "[ 4-R] Rimuovi un file all'interno del progetto"
+	echo "[ 5-M] Rinomina o sposta un file all'interno del progetto"
+	echo "[ 6-V] Visualizza i branch locali"
+	echo "[ 7  ] Crea un nuovo branch"
+	echo "[ 8-B] Spostati in in branch"
+	echo "[ 9  ] Elimina un Branch"
+	echo "[10  ] Aggiungi un repository remoto"
+	echo "[11-F] Scarica gli aggiornamenti su di un branch locale"
+	echo "[12-P] Aggiorna il repository remoto"
+	echo "[13  ] Aggiorna un branch locale con un branch remoto"
+	echo "[14  ] Git reset --hard HEAD & pull "
 	echo "[15  ] Clona un repository remoto"
 	echo "[ Q-E] Esci da SGit"
 	echo ""
@@ -78,6 +89,7 @@ echo "  Git GUI from shell"
 	read opt
 
 	case $opt in
+	
 	[1dD] ) echo "Inserisci il percorso del tuo repository Git"
 		echo -n ":"
 		read p
@@ -98,12 +110,7 @@ echo "  Git GUI from shell"
 			echo "Sono entrato in $p!";
 		fi;;
 		
-	[2nN] ) clear
-		 git init
-		 touch README
-		 echo "repository creato";;
-			
-	[3aA] ) echo "Quale file aggiungere allo stage? (* per tutti)"
+	[2aA] ) echo "Quale file aggiungere allo stage? (* per tutti)"
 		 ls
 		 echo -n ":"
 	         read f
@@ -111,14 +118,14 @@ echo "  Git GUI from shell"
 		 git add "$f"
 		 echo "Stage aggiornato";;
 		  
-	[4cC] ) echo "Inserisci un messaggio per il commit"
+	[3cC] ) echo "Inserisci un messaggio per il commit"
 		 echo -n ":"
 		 read msg
 		 clear
 		 git commit -m "$msg"
 		 echo "Commit effettuato";;
 			
-	[5rR] ) echo "Quale file rimuovere?"
+	[4rR] ) echo "Quale file rimuovere?"
 		 ls
 		 echo -n ":"
 		 read r
@@ -126,7 +133,7 @@ echo "  Git GUI from shell"
 		 git rm "$r"
 		 echo "File rimosso";;
 			
-	[6mM] ) echo "File sorgente"
+	[5mM] ) echo "File sorgente"
 		 ls
 		 echo -n ":"
 		 read s
@@ -136,25 +143,25 @@ echo "  Git GUI from shell"
 		 clear
 		 git mv "$s" "$d";;
 			
-	[7vV] ) clear
+	[6vV] ) clear
 		 echo "Branch locali:"
 		 git branch;;
 			
-	8 ) echo "Inserisci il nome del nuovo branch"
+	7 ) echo "Inserisci il nome del nuovo branch"
 	    echo -n ":"
 	    read ramo
 	    clear
 	    git branch "$ramo"
 	    echo "Nuovo ramo branch";;
 		  
-	[9bB] ) echo "Inserisci il branch nel quale spostarti"
+	[8bB] ) echo "Inserisci il branch nel quale spostarti"
 		 echo -n ":"
 		 read b
 		 clear
 		 git checkout "$b"
 		 echo "Ti sei spostato nel branch $b";;
 			
-	10 ) echo "Inserisci il branch da eliminare"
+	9 ) echo "Inserisci il branch da eliminare"
               echo -n ":"
 	      read eb
 	      clear
@@ -162,7 +169,7 @@ echo "  Git GUI from shell"
 	      git branch -d -r "$eb" 
 	      echo "Branch eliminato";;
 		   
-	11 ) echo "Inserisci il nome del repo remoto"
+	10 ) echo "Inserisci il nome del repo remoto"
 	      echo -n ":"
 	      read repo
 	      echo "Inserisci url"
@@ -172,7 +179,7 @@ echo "  Git GUI from shell"
 	      git remote add "$repo" "$url"
 	      echo "Repository remoto aggiunto";;
 		   
-	12 | "f" | "F" ) echo "Inserisci repository remoto"
+	11 | "f" | "F" ) echo "Inserisci repository remoto"
               	  echo -n ":"
 	     	  read remoto
                   echo "Inserisci branch remoto"
@@ -182,7 +189,7 @@ echo "  Git GUI from shell"
 		  git fetch "$remoto" "$branch"
 		  echo "Aggiornamenti sul repo scaricati";;
 		   
-	13 | "p" | "P" ) echo "Inserisci repository remoto"
+	12 | "p" | "P" ) echo "Inserisci repository remoto"
 		  echo -n ":"
 		  read remoto
 		  echo "Inserisci branch da inviare"
@@ -191,6 +198,10 @@ echo "  Git GUI from shell"
 		  clear
 		  git push -u "$remoto" "$branch"
 		  echo "Repository aggiornato";;
+		
+	13 ) clear
+	      git pull
+	      echo "Branch locale aggiornato";;
 		   
 	14 ) clear
 	      git reset --hard HEAD
