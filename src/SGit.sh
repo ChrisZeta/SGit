@@ -180,14 +180,9 @@ echo "  Git GUI from shell"
 		  git push -u "$remoto" "$branch"
 		  echo "Repository aggiornato";;
 		   
-	15 ) echo "Inserisci repository remoto"
-              echo -n ":"
-	      read remoto
-              echo "Inserisci branch remoto"
-	      echo -n ":"
-              read branch
-	      clear
-	      git pull "$remoto" "$branch"
+	15 ) clear
+	      git reset --hard HEAD
+	      git pull
 	      echo "Branch locale aggiornato";;
 
 	16 ) echo "Inserisci url del repository"
