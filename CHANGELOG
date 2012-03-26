@@ -23,5 +23,15 @@
 |
 |=> Correzioni minori
 |
+|========|
+|  0.5   |
+|========|
+|
+|=>Modificato il controllo sulla directory del repository, adesso
+|  viene impostata automaticamente e non accetta directory senza 
+|  repository
+|
+|=>Corretto il case
+|
 |=====================================================================|
 

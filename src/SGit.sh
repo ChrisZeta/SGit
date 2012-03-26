@@ -24,23 +24,27 @@
 #
 
 clear
-if [ -d ".git" ]; then
-        echo "Nella cartella dove sei posizionato ora c'è un repository Git."
-	echo "Vuoi utilizzarlo? [s/N]"
-	echo -n ":"
-        read GITI
-        if [ "$GITI" = "s" ]; then
-                cd ./
-		clear
-                echo "Repository Git selezionato!"
-        fi
+gitti=0
+while [ $gitti = 0 ]; do
+if [ -d ".git" ]
+then
+    echo "Nella cartella corrente c'è un repository Git."
+	echo "Directory impostata!"
+	break
 else
-        true
+	echo "Nella cartella dove corrente non c'è un repository Git."      
+	echo "Inserisci il percorso del tuo repository Git"
+	echo -n ":"
+	read p
+	clear
+	cd $p
+	echo "Sono entrato in $p!";
 fi
+done
 
 
-ESC=0
-while [ $ESC = 0 ]; do
+esc=0
+while [ $esc = 0 ]; do
 
 echo ""
 
@@ -135,7 +139,7 @@ echo "  Git GUI from shell"
 	    git branch "$ramo"
 	    echo "Nuovo ramo branch";;
 		  
-	[10bB] ) echo "Inserisci il branch nel quale spostarti"
+	10 | "b" | "B" ) echo "Inserisci il branch nel quale spostarti"
 		 echo -n ":"
 		 read b
 		 clear
@@ -160,7 +164,7 @@ echo "  Git GUI from shell"
 	      git remote add "$repo" "$url"
 	      echo "Repository remoto aggiunto";;
 		   
-	[13fF] ) echo "Inserisci repository remoto"
+	13 | "f" | "F" ) echo "Inserisci repository remoto"
               	  echo -n ":"
 	     	  read remoto
                   echo "Inserisci branch remoto"
@@ -170,7 +174,7 @@ echo "  Git GUI from shell"
 		  git fetch "$remoto" "$branch"
 		  echo "Aggiornamenti sul repo scaricati";;
 		   
-	[14pP] ) echo "Inserisci repository remoto"
+	14 | "p" | "P" ) echo "Inserisci repository remoto"
 		  echo -n ":"
 		  read remoto
 		  echo "Inserisci branch da inviare"
