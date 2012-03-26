@@ -7,7 +7,7 @@ arch=('any')
 url="https://github.com/ChrisZeta/SGit/"
 license=('GPL')
 depends=('git')
-makedepends=('git')
+makedepends=()
 provides=('sgit')
 
 
