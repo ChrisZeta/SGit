@@ -28,10 +28,19 @@
 |========|
 |
 |=> Modificato il controllo sulla directory del repository, adesso
-|  viene impostata automaticamente e non accetta directory senza 
-|  repository, inserito anche a script gia avviato
+|   viene impostata automaticamente e non accetta directory senza 
+|   repository, inserito anche a script gia avviato
 |
 |=> Corretto il case
+|
+|=> Correzioni minori
+|
+|========|
+|  0.51  |
+|========|
+|
+|=> Adesso se viene avviato in una cartella senza repository chiede
+|   l'indirizzo di un repository oppure se crearne uno nuovo.
 |
 |=> Correzioni minori
 |=====================================================================|
