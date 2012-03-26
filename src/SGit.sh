@@ -160,11 +160,14 @@ echo "  Git GUI from shell"
 	      git remote add "$repo" "$url"
 	      echo "Repository remoto aggiunto";;
 		   
-	[13fF] ) echo "Inserisci del repository"
-		  echo -n ":"
-		  read repo
+	[13fF] ) echo "Inserisci repository remoto"
+              	  echo -n ":"
+	     	  read remoto
+                  echo "Inserisci branch remoto"
+	          echo -n ":"
+                  read branch
 		  clear
-		  git fetch "$repo"
+		  git fetch "$remoto" "$branch"
 		  echo "Aggiornamenti sul repo scaricati";;
 		   
 	[14pP] ) echo "Inserisci repository remoto"
@@ -201,4 +204,4 @@ echo "  Git GUI from shell"
 	esac
 
 done
-exit
+
