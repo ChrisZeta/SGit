@@ -12,19 +12,17 @@
 |una interfaccia grafica sulla shell per gestire un repository git.
 |
 |
-|========|
-| AUTHOR |
-|========|
+|=========|
+| AUTHORS |
+|=========|
 |
-|==> Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
+|=> Christian Zucchelli (@Chris_Zeta) <thewebcha@gmail.com>
+|===> Lead Developer (2012.03.23)
  |====> Twitter: https://twitter.com/#!/chris_zeta
  |====> GitHub: https://github.com/ChrisZeta
 |
-!=============!
-! CONTRIBUTOR |
-!=============!
-!
-|==> Gianguido Sorà <gianguidorama@gmail.com>
+|=> Gianguido Sorà <gianguidorama@gmail.com>
+|===> Supporter/Patcher
  |====> Twitter: http://twitter.com/PeppeLaKappa
  |====> GitHub: https://github.com/gianguido
 |

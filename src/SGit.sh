@@ -25,7 +25,8 @@
 
 clear
 if [ -d ".git" ]; then
-        echo "Nella cartella dove sei posizionato ora c'è un repository Git, vuoi utilizzarlo? [s/n]"
+        echo "Nella cartella dove sei posizionato ora c'è un repository Git."
+	echo "Vuoi utilizzarlo? [s/N]"
 	echo -n ":"
         read GITI
         if [ "$GITI" = "s" ]; then
