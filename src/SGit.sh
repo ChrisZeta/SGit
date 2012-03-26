@@ -38,10 +38,32 @@ else
 	read c
 			if [ $c = "s" ]
 			then
-				clear
-				git init
-				touch README
-				echo "repository creato"
+				
+				while [ $esc = 0 ]; do
+					echo "Vuoi crearne uno Nuovo o effettuare un Clone?"
+					echo -n ":"
+					read u
+					case $u in
+					"n" | "N" )	clear
+								git init
+								touch README
+								echo "repository creato"
+								break;;
+					"c" | "C" ) echo "Inserisci url del repository"
+								echo -n ":"
+								read url
+								echo "Inserisci il nome del repository"
+								echo -n ":"
+								read name
+								clear
+								git clone "$url"
+								echo "Repository clonato"
+								cd $name
+								break;;
+					* ) 		clear
+								echo "Scelta non valida";;
+					esac
+					done
 			else
 	echo "Inserisci il percorso del tuo repository Git"
 	echo -n ":"
@@ -209,10 +231,14 @@ echo "  Git GUI from shell"
 	      echo "Branch locale aggiornato";;
 
 	15 ) echo "Inserisci url del repository"
-	      read url
-	      clear
-	      git clone "$url"
-	      echo "Repository clonato";;
+		 read url
+		 echo "Inserisci il nome del repository"
+		 echo -n ":"
+		 read name
+		 clear
+		 git clone "$url"
+		 echo "Repository clonato"
+		 cd $name;;
 		   
 	[qQeE] ) exit;;
 		   
