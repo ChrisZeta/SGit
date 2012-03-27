@@ -240,7 +240,8 @@ echo "  Git GUI from shell"
 		 echo "Repository clonato"
 		 cd $name;;
 		   
-	[qQeE] ) exit;;
+	[qQeE] ) clear
+		  exit;;
 		   
 		  
 	* ) clear
