@@ -40,7 +40,7 @@
 |========|
 |
 |=> Adesso se viene avviato in una cartella senza repository chiede
-|   l'indirizzo di un repository oppure se crearne uno nuovo.
+|   l'indirizzo di un repository oppure se crearne/clonarne uno
 |
 |=> Correzioni minori
 |=====================================================================|
