@@ -40,7 +40,7 @@ else
 			then
 				
 				while [ $esc = 0 ]; do
-					echo "Vuoi crearne uno Nuovo o effettuare un Clone?"
+					echo "Vuoi crearne uno (N)uovo o effettuare un (C)lone?"
 					echo -n ":"
 					read u
 					case $u in
@@ -88,6 +88,7 @@ echo "| \__ \ (_ | |  _|  \ "
 echo "| |___/\___|_|\__|   \ "
 echo "|=====================\ "
 echo "  Git GUI from shell"
+echo "  Version 0.51 [Alpha]"
 
 	echo ""
 	echo "[ 1-D] Cambia directory del repository Git"
