@@ -212,14 +212,14 @@ echo "  Version 0.51 [Alpha]"
 		  git fetch "$remoto" "$branch"
 		  echo "Aggiornamenti sul repo scaricati";;
 		   
-	12 | "p" | "P" ) echo "Inserisci repository remoto"
-		  echo -n ":"
-		  read remoto
-		  echo "Inserisci branch da inviare"
+	12 | "p" | "P" ) echo "Inserisci branch da inviare"
 		  echo -n ":"
 		  read branch
+		  echo "Inserisci repository remoto"
+		  echo -n ":"
+		  read remoto
 		  clear
-		  git push -u "$remoto" "$branch"
+		  git push -u "$branch" "$remoto"
 		  echo "Repository aggiornato";;
 		
 	13 ) clear
